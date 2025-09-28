@@ -41,34 +41,36 @@ exampleProject/
 
 ### Opción 1: Con Docker (Recomendado)
 
-**Construir las imágenes:**
+**Desarrollo (por defecto):**
 ```bash
-docker compose build
-```
+# Construir y levantar
+docker compose up --build
 
-**Levantar los servicios:**
-```bash
+# Solo levantar
 docker compose up
-```
 
-**Levantar en modo detached (en segundo plano):**
-```bash
+# En segundo plano
 docker compose up -d
 ```
 
-**Construir y levantar en un solo comando:**
+**Producción:**
 ```bash
-docker compose up --build
+# Cambiar a target production y construir
+docker compose build --build-arg TARGET=production frontend
+
+# O modificar temporalmente el docker-compose.yml cambiando 'target: development' por 'target: production'
 ```
 
-**Parar los servicios:**
+**Comandos generales:**
 ```bash
+# Parar los servicios
 docker compose down
-```
 
-**Parar y eliminar volúmenes:**
-```bash
+# Parar y eliminar volúmenes
 docker compose down -v
+
+# Reconstruir todo desde cero
+docker compose build --no-cache
 ```
 
 Esto levantará todos los servicios:

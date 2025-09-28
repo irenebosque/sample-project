@@ -1,6 +1,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-09-12',
   devtools: { enabled: true },
+  ssr: true,
 
   runtimeConfig: {
     public: {
@@ -10,6 +11,6 @@ export default defineNuxtConfig({
 
   server: {
     port: 3000,
-    host: 'localhost'
+    host: '0.0.0.0'
   }
 })

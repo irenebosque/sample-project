@@ -5,7 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("app")
 
-from .api.random_word_api import router as random_word_router
+from api.random_word_api import router as random_word_router
 
 app = FastAPI()
 
