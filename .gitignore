@@ -1,0 +1,4 @@
+node_modules
+.nuxt
+__pycache__
+.DS_Store
