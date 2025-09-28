@@ -1,10 +1,10 @@
-version: '3.8'
 
 services:
   # Backend Python (FastAPI)
   backend:
     build:
-      context: ./src/main/docker/backend
+      context: ./src/main/python
+      dockerfile: ../docker/backend/Dockerfile
     container_name: exampleProject-backend
     restart: unless-stopped
     ports:

@@ -41,8 +41,34 @@ exampleProject/
 
 ### Opción 1: Con Docker (Recomendado)
 
+**Construir las imágenes:**
 ```bash
-docker-compose up --build
+docker compose build
+```
+
+**Levantar los servicios:**
+```bash
+docker compose up
+```
+
+**Levantar en modo detached (en segundo plano):**
+```bash
+docker compose up -d
+```
+
+**Construir y levantar en un solo comando:**
+```bash
+docker compose up --build
+```
+
+**Parar los servicios:**
+```bash
+docker compose down
+```
+
+**Parar y eliminar volúmenes:**
+```bash
+docker compose down -v
 ```
 
 Esto levantará todos los servicios:
