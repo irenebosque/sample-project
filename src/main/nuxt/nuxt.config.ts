@@ -5,7 +5,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      backendApiUrl: process.env.BACKEND_API_URL || 'http://localhost:8002',
+      backendApiUrl: process.env.BACKEND_API_URL || 'http://localhost:8000',
     }
   },
 

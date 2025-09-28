@@ -41,6 +41,15 @@ exampleProject/
 
 ### Opción 1: Con Docker (Recomendado)
 
+**Configuración:**
+Copia el archivo de variables de entorno:
+```bash
+cp .env.example .env
+```
+O usa las variables por defecto ya configuradas en `.env`.
+
+**Comandos Docker:**
+
 **Desarrollo (por defecto):**
 ```bash
 # Construir y levantar

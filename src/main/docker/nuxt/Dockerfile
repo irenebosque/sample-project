@@ -2,6 +2,10 @@
 FROM node:22-alpine AS build
 WORKDIR /app
 
+# Build argument for backend URL
+ARG BACKEND_API_URL
+ENV BACKEND_API_URL=${BACKEND_API_URL}
+
 RUN corepack enable
 
 # Copy package.json and lockfile
