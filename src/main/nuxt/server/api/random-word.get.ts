@@ -2,7 +2,8 @@ export default defineEventHandler(async (event) => {
   try {
     const { public: { backendApiUrl } } = useRuntimeConfig(event)
 
-    const response = await $fetch(`${backendApiUrl}/api/random-word`)
+    const response = await $fetch(`${backendApiUrl}/api/random-word/get_random_word`)
+
 
     return {
       success: true,
