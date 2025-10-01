@@ -5,7 +5,7 @@ import logging
 
 logger = logging.getLogger("app")
 
-router = APIRouter()
+router = APIRouter(prefix="/random-word", tags=["Random Word"])
 
 RANDOM_WORDS = [
     "banana", "elephant", "guitar", "rainbow", "mountain",
@@ -14,12 +14,12 @@ RANDOM_WORDS = [
     "cosmic", "dragon", "crystal", "thunder", "magic"
 ]
 
-@router.get("/api/random-word")
+@router.get("/get_random_word")
 async def get_random_word():
     """
     Devuelve una palabra aleatoria de una lista predefinida
     """
-    logger.info("🎲 /api/random-word - Obteniendo palabra aleatoria")
+    logger.info("🎲 /random-word - Obteniendo palabra aleatoria")
 
     try:
         random_word = random.choice(RANDOM_WORDS)
